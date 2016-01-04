@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YUs-gG-1P2">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Kalkulator napiwków-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TipCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kwota na rachunku" textAlignment="right" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="I2d-EK-2fF">
+                                <rect key="frame" x="15" y="79" width="570" height="80"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="qmm-8g-I8Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="61"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="billValueChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="lAc-dP-oZd"/>
+                                </connections>
+                            </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="eb4-Nd-4rH">
+                                <rect key="frame" x="13" y="308" width="574" height="31"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="tipPercentSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="nId-7h-jHd"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJd-d3-x15">
+                                <rect key="frame" x="15" y="234" width="570" height="51"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="43"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0zł" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YS2-cJ-hmY">
+                                <rect key="frame" x="534" y="384" width="51" height="33"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0zł" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Sw-N2-J0u">
+                                <rect key="frame" x="490" y="468" width="95" height="53"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="45"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wysokość napiwku:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMw-PU-rAF">
+                                <rect key="frame" x="15" y="391" width="139" height="18"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do zapłaty:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deL-Ns-ckZ">
+                                <rect key="frame" x="15" y="486" width="78" height="18"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="I2d-EK-2fF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="0I1-fY-DZ1"/>
+                            <constraint firstItem="eb4-Nd-4rH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="19J-hN-qZx"/>
+                            <constraint firstItem="deL-Ns-ckZ" firstAttribute="centerY" secondItem="2Sw-N2-J0u" secondAttribute="centerY" id="1o0-ac-MKi"/>
+                            <constraint firstItem="eb4-Nd-4rH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2vm-M0-ItR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YS2-cJ-hmY" secondAttribute="trailing" constant="-5" id="6uZ-Yc-CrX"/>
+                            <constraint firstItem="eb4-Nd-4rH" firstAttribute="width" secondItem="oJd-d3-x15" secondAttribute="width" id="DA4-gz-xxX"/>
+                            <constraint firstItem="eb4-Nd-4rH" firstAttribute="width" secondItem="I2d-EK-2fF" secondAttribute="width" id="Fzu-Cf-TpB"/>
+                            <constraint firstItem="gMw-PU-rAF" firstAttribute="top" secondItem="eb4-Nd-4rH" secondAttribute="bottom" constant="53" id="G6t-Dz-NH7"/>
+                            <constraint firstItem="deL-Ns-ckZ" firstAttribute="trailing" secondItem="gMw-PU-rAF" secondAttribute="trailing" id="GxV-6P-RfP"/>
+                            <constraint firstItem="oJd-d3-x15" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IHL-Jb-2KT"/>
+                            <constraint firstItem="gMw-PU-rAF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LX3-h1-EWz"/>
+                            <constraint firstItem="YS2-cJ-hmY" firstAttribute="centerY" secondItem="gMw-PU-rAF" secondAttribute="centerY" id="QZ6-bS-X7E"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Sw-N2-J0u" secondAttribute="trailing" constant="-5" id="RR2-fY-SMQ"/>
+                            <constraint firstItem="oJd-d3-x15" firstAttribute="top" secondItem="I2d-EK-2fF" secondAttribute="bottom" constant="75" id="T0g-f3-KY1"/>
+                            <constraint firstItem="eb4-Nd-4rH" firstAttribute="top" secondItem="oJd-d3-x15" secondAttribute="bottom" constant="23" id="T0z-Fh-PWj"/>
+                            <constraint firstItem="2Sw-N2-J0u" firstAttribute="top" secondItem="YS2-cJ-hmY" secondAttribute="bottom" constant="51" id="U8N-88-8MJ"/>
+                            <constraint firstItem="I2d-EK-2fF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="V2a-yZ-c8c"/>
+                            <constraint firstItem="eb4-Nd-4rH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VGd-2T-a1v"/>
+                            <constraint firstItem="deL-Ns-ckZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-5" id="e22-6Q-RR2"/>
+                            <constraint firstItem="eb4-Nd-4rH" firstAttribute="top" secondItem="I2d-EK-2fF" secondAttribute="bottom" constant="114" id="fXm-fm-Uam"/>
+                            <constraint firstItem="gMw-PU-rAF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-5" id="nA5-Nc-Ht1"/>
+                            <constraint firstItem="I2d-EK-2fF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="qK1-7k-Dgg"/>
+                            <constraint firstAttribute="trailing" secondItem="I2d-EK-2fF" secondAttribute="trailing" constant="15" id="scD-4A-wIk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="I2d-EK-2fF" secondAttribute="trailing" constant="15" id="shD-Rd-yaM"/>
+                            <constraint firstItem="oJd-d3-x15" firstAttribute="width" secondItem="I2d-EK-2fF" secondAttribute="width" id="vJm-nq-uIw"/>
+                            <constraint firstItem="I2d-EK-2fF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z3o-T6-35h"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="qK1-7k-Dgg"/>
+                                <exclude reference="shD-Rd-yaM"/>
+                                <exclude reference="19J-hN-qZx"/>
+                                <exclude reference="Fzu-Cf-TpB"/>
+                                <exclude reference="VGd-2T-a1v"/>
+                                <exclude reference="fXm-fm-Uam"/>
+                                <exclude reference="LX3-h1-EWz"/>
+                                <exclude reference="GxV-6P-RfP"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Kalkulator napiwków" id="q12-L2-dNr"/>
+                    <connections>
+                        <outlet property="billValue" destination="I2d-EK-2fF" id="JC6-5O-YqB"/>
+                        <outlet property="tipPercentLabel" destination="oJd-d3-x15" id="1AK-HB-3Ce"/>
+                        <outlet property="tipPercentSlider" destination="eb4-Nd-4rH" id="rf8-P0-6z3"/>
+                        <outlet property="tipValue" destination="YS2-cJ-hmY" id="OAJ-CT-cnZ"/>
+                        <outlet property="totalValue" destination="2Sw-N2-J0u" id="lQB-S4-2nO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1109" y="353"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xIz-lo-B94">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YUs-gG-1P2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Pn-as-w15">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="sRE-wp-PdH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HCd-Uh-zAV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="335" y="1017"/>
+        </scene>
+    </scenes>
+</document>
