@@ -6,7 +6,7 @@
 //  Copyright © 2016 COREO. All rights reserved.
 //
 
-class TipCalculatorModel {
+struct TipCalculatorModel {
     
     var billValue = Float(0.0)
     var tipPercent = 20

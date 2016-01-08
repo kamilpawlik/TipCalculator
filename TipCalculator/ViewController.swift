@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
     @IBOutlet weak var billValue: UITextField!
     @IBOutlet weak var tipPercentLabel: UILabel!
     @IBOutlet weak var tipPercentSlider: UISlider!
@@ -52,8 +53,5 @@ class ViewController: UIViewController {
     }
 
     
-
-
-
 }
 
